@@ -1,0 +1,103 @@
+<div class="bg-white">
+  <div class="relative isolate px-6 pt-14 lg:px-8">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#15552b] to-[#d3aa15] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="mx-auto max-w-2xl py-32 ">
+      <div>
+        <img class="mx-auto mb-5" src="./assets/images/logo_funeral_place.png">
+      </div>
+      <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+        <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+          24 horas disponivel para você <a href="#" class="font-semibold text-[#15552b]">
+            <!--
+              <span class="absolute inset-0" aria-hidden="true"></span>Veja mais <span aria-hidden="true">&rarr;</span>
+            -->
+          </a>
+        </div>
+      </div>
+      <div class="text-center">
+        <h1 class="text-2xl font-bold tracking-tight text-primaryGreen sm:text-2xl">Onde o respeito e o cuidado se encontram</h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600">Funeral Place, honrando memórias com salas de velórios especiais e um ambiente acolhedor.</p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a href="#" class="rounded-md bg-[#15552b] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#15832b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 duration-150">Solicitar contato</a>
+          <!--
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Ler mais <span aria-hidden="true">→</span></a>
+          -->
+        </div>
+      </div>
+    </div>
+    <!--
+      <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#15552b] to-[#d3aa15] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+    -->
+  </div>
+</div>
+
+  <div class="bg-gray-100 py-10">
+    <div class="text-center text-primaryGreen sm:text-4xl w-full">
+      O que oferecemos
+    </div>
+    <div class="flex justify-center py-4 mt-4">
+      <div *ngFor="let item of listItensPrincipais" class="group cursor-pointer mr-4">
+        <img class="h-52 rounded-sm" src="{{item.image}}">
+        <div class="py-4 group-hover:text-yellow-500 text-center text-xs duration-200 uppercase text-primaryGreen">{{item.txt}}</div>
+      </div>
+    </div>
+  </div>
+<div class="bg-[url('/assets/images/parallax.jpg')] bg-fixed py-32 flex justify-center">
+  <div class="w-[50%]">
+    <div class="text-center text-primaryGreen text-4xl">
+      Nas lembranças que guardamos, sua presença sempre estará viva, mesmo após a despedida.
+    </div>
+  </div>
+</div>
+<div class="bg-white flex justify-center">
+  <div class="w-[60%]">
+    <div class="grid grid-cols-2">
+      <div class="flex flex-col py-16">
+        <div class="text-primaryGreen pb-4 text-xl">
+          Informações
+        </div>
+        <div class="text-gray-900 font-[500]">
+          Funcionamento 24 Horas:
+        </div>
+        <div class="text-gray-500">
+          Plantão de Atendimento ao Cliente.
+        </div>
+        <div class="text-gray-500">
+          Plantão de vendas. (Cemitério, Crematório e Funerária).
+        </div>
+
+        <div class="text-gray-900 font-[500] mt-4">
+          Horário de visitas:
+        </div>
+        <div class="text-gray-500">
+          Das 8 horas às 17 horas (todos os dias)
+        </div>
+
+        <div class="text-gray-900 font-[500] mt-4">
+          Horário de Atendimento Administração:
+        </div>
+        <div class="text-gray-500">
+          Das 8 horas às 17 horas (todos os dias)
+        </div>
+
+      </div>
+      <div class="flex justify-center py-16">
+        <div class="flex flex-col">
+          <div class="">
+            <img src="./assets/images/logo-nav-funeral.png">
+          </div>
+          <div class="flex justify-center">
+            <div class="px-4 text-gray-900 w-[450px]">
+              O Velório Funeral Place, foi a primeira Casa de Velório do ABC. Fica localizado em região nobre de São Caetano do Sul, tido como um dos principais, realiza velórios e costuma atender com o mais alto nível os que procuram os seus serviços. É um dos mais requisitados e destaca-se pelo seu excelente atendimento, cordialidade e presteza.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-solicitar-contato></app-solicitar-contato>

@@ -1,0 +1,29 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
+})
+export class HomeComponent {
+
+  listItensPrincipais: any[] = [
+    {
+      image:'./assets/images/funeraria-5.jpg',
+      txt: 'Salas de velórios especiais'
+    },
+    {
+      image:'./assets/images/funeraria-7.jpg',
+      txt: 'Salas de estar climatizadas'
+    },
+    {
+      image:'./assets/images/funeraria-2.jpg',
+      txt: 'Espaço de 330 m² de área construída'
+    },
+    {
+      image:'./assets/images/funeraria-1.jpg',
+      txt: 'Serviços de vigilância por câmeras 24 h'
+    }
+  ];
+
+}
