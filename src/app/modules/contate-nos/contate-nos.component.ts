@@ -27,7 +27,7 @@ createForm(){
     mensagem:['', Validators.required],
     phone:['', Validators.required],
     assunto:['', Validators.required],
-    destinatario:['contato@funeralplace.com.br', Validators.required]
+    destinatario:['funeraria@jardimdacolina.com.br', Validators.required]
   })
 }
 

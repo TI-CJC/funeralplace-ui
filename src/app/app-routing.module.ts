@@ -7,7 +7,9 @@ import { ContateNosComponent } from './modules/contate-nos/contate-nos.component
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'quem-somos', component: QuemSomosComponent },
-  { path: 'contate-nos', component: ContateNosComponent }
+  { path: 'contate-nos', component: ContateNosComponent },
+  { path: 'servicos', component: ContateNosComponent },
+  { path: 'ambiente', component: ContateNosComponent },
 ];
 
 @NgModule({
