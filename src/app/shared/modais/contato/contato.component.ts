@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {
   initTE,
 } from "tw-elements";
@@ -14,6 +14,8 @@ export class ContatoComponent {
 
 formContato!: FormGroup;
 statusEmail = '';
+submit = false;
+
 constructor(
   private formBuilder:FormBuilder,
   private serviceEmail: EmailService
@@ -30,13 +32,18 @@ createForm(){
     mensagem:['', Validators.required],
     phone:['', Validators.required],
     assunto:['', Validators.required],
-    destinatario:['almir.junior@jardimdacolina.com.br', Validators.required]
+    destinatario:['funeraria@jardimdacolina.com.br', Validators.required]
   })
+}
+
+get form(): { [key: string]: AbstractControl } {
+  return this.formContato.controls;
 }
 
 sendEmail(){
   console.log(this.formContato.getRawValue());
   this.statusEmail = 'enviando'
+  this.submit
   if(this.formContato.valid){
 
     const body = this.formContato.getRawValue();

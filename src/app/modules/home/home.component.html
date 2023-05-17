@@ -20,7 +20,14 @@
         <h1 class="text-2xl font-bold tracking-tight text-primaryGreen sm:text-2xl">Onde o respeito e o cuidado se encontram</h1>
         <p class="mt-6 text-lg leading-8 text-gray-600">Funeral Place, honrando memórias com salas de velórios especiais e um ambiente acolhedor.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#" class="rounded-md bg-[#15552b] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#15832b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 duration-150">Solicitar contato</a>
+          <button
+          class="rounded-md bg-[#15552b] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#15832b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 duration-150"
+          data-te-toggle="modal"
+          data-te-target="#modal"
+          data-te-ripple-init
+          data-te-ripple-color="light"
+          >Solicitar contato
+          </button>
           <!--
             <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Ler mais <span aria-hidden="true">→</span></a>
           -->
@@ -101,3 +108,4 @@
   </div>
 </div>
 <app-solicitar-contato></app-solicitar-contato>
+<app-contato [nomeModal]="nomeModal"></app-contato>

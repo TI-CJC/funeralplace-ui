@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-
+import {
+  Modal,
+  Ripple,
+  initTE,
+} from "tw-elements";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -25,5 +29,9 @@ export class HomeComponent {
       txt: 'Serviços de vigilância por câmeras 24 h'
     }
   ];
+  nomeModal = 'modal'
 
+  ngOnInit() {
+    initTE({ Modal, Ripple });
+  }
 }
