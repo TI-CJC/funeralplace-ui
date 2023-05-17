@@ -10,6 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { ContateNosComponent } from './modules/contate-nos/contate-nos.component';
 import { ServicosComponent } from './modules/servicos/servicos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AmbienteComponent } from './modules/ambiente/ambiente.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     QuemSomosComponent,
     ContateNosComponent,
     ServicosComponent,
+    AmbienteComponent,
   ],
   imports: [
     BrowserModule,
