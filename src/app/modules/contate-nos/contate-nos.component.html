@@ -43,67 +43,94 @@
       <div class="flex justify-center mt-10">
         <div class="bg-gray-100 shadow-md p-6 w-[600px]">
           <form [formGroup]="formContato" class="flex flex-col">
-            <div class="relative mb-4 flex flex-wrap items-stretch">
-              <span
-                class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
-                id="inputGroup-sizing-default"
-                >Nome</span
-              >
-              <input
-                type="text"
-                class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-white bg-clip-padding px-3 py-[0.50rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primaryGreen focus:text-neutral-700"
-                placeholder="Digite seu nome completo"
-                aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default"
-                formControlName="name"
-                />
+            <div class="flex flex-col mb-4">
+              <div class="relative flex flex-wrap items-stretch">
+                <span
+                  class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+                  id="inputGroup-sizing-default"
+                  >Nome</span
+                >
+                <input
+                  type="text"
+                  class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-white bg-clip-padding px-3 py-[0.50rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primaryGreen focus:text-neutral-700"
+                  [ngClass]=""
+                  placeholder="Digite seu nome completo"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                  [ngClass]="{ 'border-red-500': submit && form['name'].errors }"
+                  formControlName="name"
+                  />
+              </div>
+              <div *ngIf="submit && form['name'].errors" class="text-[10px] sm:text-[11px] ml-[70px] mt-0.5 text-red-500">
+                <div *ngIf="form['name'].errors">Este campo é obrigatório</div>
+              </div>
             </div>
-            <div class="relative mb-4 flex flex-wrap items-stretch">
-              <span
-                class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
-                id="inputGroup-sizing-default"
-                >Email</span
-              >
-              <input
-                type="text"
-                class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-white bg-clip-padding px-3 py-[0.50rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primaryGreen focus:text-neutral-700"
-                placeholder="Digite seu Email"
-                aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default"
-                formControlName="email"
-                />
+            <div class="flex flex-col mb-4">
+              <div class="relative flex flex-wrap items-stretch">
+                <span
+                  class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+                  id="inputGroup-sizing-default"
+                  >Email</span
+                >
+                <input
+                  type="text"
+                  class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-white bg-clip-padding px-3 py-[0.50rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primaryGreen focus:text-neutral-700"
+                  [ngClass]=""
+                  placeholder="Digite seu email"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                  [ngClass]="{ 'border-red-500': submit && form['email'].errors }"
+                  formControlName="email"
+                  />
+              </div>
+              <div *ngIf="submit && form['email'].errors" class="text-[10px] sm:text-[11px] ml-[70px] mt-0.5 text-red-500">
+                <div *ngIf="form['email'].errors">Este campo é obrigatório</div>
+              </div>
             </div>
-            <div class="relative mb-4 flex flex-wrap items-stretch">
-              <span
-                class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] w-[85px] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
-                id="inputGroup-sizing-default"
-                >Telefone</span
-              >
-              <input
-                type="text"
-                class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-white bg-clip-padding px-3 py-[0.50rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primaryGreen focus:text-neutral-700"
-                placeholder="Digite seu telefone"
-                aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default"
-                formControlName="phone"
-                />
+            <div class="flex flex-col mb-4">
+              <div class="relative flex flex-wrap items-stretch">
+                <span
+                  class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+                  id="inputGroup-sizing-default"
+                  >Telefone</span
+                >
+                <input
+                  type="text"
+                  class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-white bg-clip-padding px-3 py-[0.50rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primaryGreen focus:text-neutral-700"
+                  [ngClass]=""
+                  placeholder="Digite o seu telefone"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                  [ngClass]="{ 'border-red-500': submit && form['phone'].errors }"
+                  formControlName="phone"
+                  />
+              </div>
+              <div *ngIf="submit && form['phone'].errors" class="text-[10px] sm:text-[11px] ml-[90px] mt-0.5 text-red-500">
+                <div *ngIf="form['phone'].errors">Este campo é obrigatório</div>
+              </div>
             </div>
-            <div class="relative mb-4 flex flex-wrap items-stretch">
-              <span
-                class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] w-[85px] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
-                id="inputGroup-sizing-default"
-                >Assunto</span
-              >
-              <input
-                type="text"
-                class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-white bg-clip-padding px-3 py-[0.50rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primaryGreen focus:text-neutral-700"
-                placeholder="Digite assunto do contato"
-                aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default"
-                formControlName="assunto"
-                />
+            <div class="flex flex-col mb-4">
+              <div class="relative flex flex-wrap items-stretch">
+                <span
+                  class="flex items-center whitespace-nowrap rounded-l border border-r-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+                  id="inputGroup-sizing-default"
+                  >Assunto</span
+                >
+                <input
+                  type="text"
+                  class="relative m-0 block w-[1px] min-w-0 flex-auto rounded-r border border-solid border-neutral-300 bg-white bg-clip-padding px-3 py-[0.50rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primaryGreen focus:text-neutral-700"
+                  [ngClass]=""
+                  placeholder="Digite o assunto da menssagem"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                  [ngClass]="{ 'border-red-500': submit && form['assunto'].errors }"
+                  formControlName="assunto"
+                  />
+              </div>
+              <div *ngIf="submit && form['assunto'].errors" class="text-[10px] sm:text-[11px] ml-[90px] mt-0.5 text-red-500">
+                <div *ngIf="form['assunto'].errors">Este campo é obrigatório</div>
+              </div>
             </div>
-
             <div class="relative mb-4 flex ">
               <textarea
               type="text"

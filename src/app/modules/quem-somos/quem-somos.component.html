@@ -1,19 +1,19 @@
 
 <div class="flex justify-center my-32">
-  <div class="w-[80%] grid grid-cols-2">
+  <div class="w-[80%] flex flex-col sm:grid sm:grid-cols-2">
     <div class="mx-auto mt-4">
-      <div class="h-[300px]">
+      <div class="h-[250px] sm:h-[300px]">
         <img class="mx-auto max-h-[300px]" src="{{imgSelected}}">
       </div>
       <div class="flex flex-row mt-2">
         <div class="cursor-pointer hover:scale-105 duration-150" *ngFor="let item of listImages">
-          <img (click)="selectImg(item.image)" class="h-24 mr-2" src="{{item.image}}">
+          <img (click)="selectImg(item.image)" class="h-[47px] sm:h-24 mr-2" src="{{item.image}}">
         </div>
       </div>
     </div>
-    <div class="">
+    <div class="mt-6">
       <div class="flex flex-col">
-        <div class="text-primaryGreen text-4xl mb-10">Funeral Place</div>
+        <div class="text-primaryGreen text-center sm:text-start text-2xl sm:text-4xl mb-10">Funeral Place</div>
         <div class="max-w-[450px] text-gray-500">
           O Velório Funeral Place, foi a primeira Casa de Velório do ABC. Fica localizado em região nobre de São Caetano do Sul, tido como um dos principais, realiza velórios e costuma atender com o mais alto nível os que procuram os seus serviços. É um dos mais requisitados e destaca-se pelo seu excelente atendimento, cordialidade e presteza.
         </div>

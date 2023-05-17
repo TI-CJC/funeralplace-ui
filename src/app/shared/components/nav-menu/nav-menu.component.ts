@@ -1,12 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {
+  Sidenav,
+  initTE,
+} from "tw-elements";
 
 @Component({
   selector: 'app-nav-menu',
   templateUrl: './nav-menu.component.html',
   styleUrls: ['./nav-menu.component.scss']
 })
-export class NavMenuComponent {
+export class NavMenuComponent implements OnInit {
   itensMenu: any[] = [
     {nome:"Home", url: "/"},
     {nome:"Quem somos", url: "quem-somos"},
@@ -17,6 +21,10 @@ export class NavMenuComponent {
   constructor(
     private router: Router
   ){}
+
+  ngOnInit(){
+    initTE({ Sidenav });
+  }
 
   navegate(rota:any){
     this.router.navigate([rota]);

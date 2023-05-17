@@ -1,22 +1,23 @@
 <div class="w-full bg-gray-100">
   <div class="flex justify-center">
     <div class="2xl:w-[80%]">
-      <div class="grid grid-cols-3 py-8">
-        <div class="flex justify-center">
+      <div class="flex flex-col sm:grid sm:grid-cols-3 py-8 px-4">
+        <div class="flex justify-start sm:justify-center">
           <div class="flex flex-col">
             <div class="text-2xl text-primaryGreen">Plantão 24h</div>
             <div class="pt-2">(11) 4227-9595</div>
             <div class="pt-2">(11) 4122-0000</div>
           </div>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-4 sm:mt-0">
           <div class="flex flex-col">
             <div class="text-2xl text-primaryGreen">Contato</div>
-            <div class="pt-2">contato@jardimdacolina.com.br</div>
-            <div class="pt-2">Rua Oriente, 299 - Bairro Barcelona - São Caetano do Sul - SP</div>
+            <div class="pt-0.5 sm:pt-2">contato@funeralplace.com.br</div>
+            <div class="pt-0.5 sm:pt-2">contato@jardimdacolina.com.br</div>
+            <div class="pt-0.5 sm:pt-2">Rua Oriente, 299 - Bairro Barcelona - São Caetano do Sul - SP</div>
           </div>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-start sm:justify-center mt-4 sm:mt-0">
           <div class="flex flex-col">
             <div *ngFor="let item of itemsMenu" [routerLink]="item.url" (click)="scrollToElement(main)" class="mb-2 text-primaryGreen hover:text-yellow-500 duration-200 cursor-pointer">
               {{item.nome}}

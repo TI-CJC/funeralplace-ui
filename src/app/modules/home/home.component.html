@@ -46,23 +46,23 @@
     <div class="text-center text-primaryGreen sm:text-4xl w-full">
       O que oferecemos
     </div>
-    <div class="flex justify-center py-4 mt-4">
+    <div class="flex sm:flex-row flex-col justify-center py-4 mt-4">
       <div *ngFor="let item of listItensPrincipais" class="group cursor-pointer mr-4">
-        <img class="h-52 rounded-sm" src="{{item.image}}">
+        <img class="h-52 rounded-sm mx-auto" src="{{item.image}}">
         <div class="py-4 group-hover:text-yellow-500 text-center text-xs duration-200 uppercase text-primaryGreen">{{item.txt}}</div>
       </div>
     </div>
   </div>
 <div class="bg-[url('/assets/images/parallax.jpg')] bg-fixed py-32 flex justify-center">
-  <div class="w-[50%]">
-    <div class="text-center text-primaryGreen text-4xl">
+  <div class="w-[80%] sm:w-[50%]">
+    <div class="text-center text-primaryGreen text-xl xl:text-4xl">
       Nas lembranças que guardamos, sua presença sempre estará viva, mesmo após a despedida.
     </div>
   </div>
 </div>
 <div class="bg-white flex justify-center">
-  <div class="w-[60%]">
-    <div class="grid grid-cols-2">
+  <div class="w-[80%] sm:w-[60%]">
+    <div class="flex flex-col sm:grid sm:grid-cols-2">
       <div class="flex flex-col py-16">
         <div class="text-primaryGreen pb-4 text-xl">
           Informações
@@ -92,13 +92,13 @@
         </div>
 
       </div>
-      <div class="flex justify-center py-16">
+      <div class="flex justify-center pb-16 sm:py-16">
         <div class="flex flex-col">
           <div class="">
             <img src="./assets/images/logo-nav-funeral.png">
           </div>
           <div class="flex justify-center">
-            <div class="px-4 text-gray-900 w-[450px]">
+            <div class="sm:px-4 text-gray-900 xl:w-[450px]">
               O Velório Funeral Place, foi a primeira Casa de Velório do ABC. Fica localizado em região nobre de São Caetano do Sul, tido como um dos principais, realiza velórios e costuma atender com o mais alto nível os que procuram os seus serviços. É um dos mais requisitados e destaca-se pelo seu excelente atendimento, cordialidade e presteza.
             </div>
           </div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmailService } from 'src/app/shared/services/email.service';
 
 @Component({
@@ -11,6 +11,8 @@ export class ContateNosComponent {
 
   formContato!: FormGroup;
   statusEmail = '';
+  submit = false;
+
   constructor(
     private formBuilder:FormBuilder,
     private serviceEmail: EmailService
@@ -31,10 +33,15 @@ createForm(){
   })
 }
 
+get form(): { [key: string]: AbstractControl } {
+  return this.formContato.controls;
+}
+
 sendEmail(){
   console.log(this.formContato.getRawValue());
-  this.statusEmail = 'enviando'
+  this.submit = true;
   if(this.formContato.valid){
+    this.statusEmail = 'enviando'
 
     const body = this.formContato.getRawValue();
     console.log(body);
@@ -53,5 +60,6 @@ sendEmail(){
     })
   }
 }
+
 
 }

@@ -42,9 +42,9 @@ get form(): { [key: string]: AbstractControl } {
 
 sendEmail(){
   console.log(this.formContato.getRawValue());
-  this.statusEmail = 'enviando'
-  this.submit
+  this.submit = true;
   if(this.formContato.valid){
+    this.statusEmail = 'enviando'
 
     const body = this.formContato.getRawValue();
     console.log(body);
