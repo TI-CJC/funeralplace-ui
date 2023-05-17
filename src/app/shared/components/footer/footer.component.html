@@ -5,7 +5,7 @@
         <div class="flex justify-center">
           <div class="flex flex-col">
             <div class="text-2xl text-primaryGreen">Plantão 24h</div>
-            <div class="pt-2">(11) 4122-0000</div>
+            <div class="pt-2">(11) 4227-9595</div>
             <div class="pt-2">(11) 4122-0000</div>
           </div>
         </div>
@@ -18,7 +18,7 @@
         </div>
         <div class="flex justify-center">
           <div class="flex flex-col">
-            <div *ngFor="let item of itemsMenu" [routerLink]="item.url" class="mb-2 text-primaryGreen hover:text-yellow-500 duration-200 cursor-pointer">
+            <div *ngFor="let item of itemsMenu" [routerLink]="item.url" (click)="scrollToElement(main)" class="mb-2 text-primaryGreen hover:text-yellow-500 duration-200 cursor-pointer">
               {{item.nome}}
             </div>
             <!--

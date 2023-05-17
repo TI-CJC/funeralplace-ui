@@ -6,6 +6,8 @@ import { AppRoutingModule } from '../app-routing.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { SolicitarContatoComponent } from './components/solicitar-contato/solicitar-contato.component';
 import { ContatoComponent } from './modais/contato/contato.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertsComponent } from './modais/alerts/alerts.component';
 
 
 
@@ -14,18 +16,22 @@ import { ContatoComponent } from './modais/contato/contato.component';
     NavMenuComponent,
     FooterComponent,
     SolicitarContatoComponent,
-    ContatoComponent
+    ContatoComponent,
+    AlertsComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     NavMenuComponent,
     FooterComponent,
     SolicitarContatoComponent,
-    ContatoComponent
+    ContatoComponent,
+    AlertsComponent
   ]
 })
 export class SharedModule { }

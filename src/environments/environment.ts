@@ -4,11 +4,7 @@
 
 export const environment = {
   production: false,
-  //baseUrl: 'https://epicapi.azurewebsites.net/api/'
-  //baseUrl: 'https://api2.jardimdacolina.com.br:8443/api/'
-  //baseUrl: 'http://192.168.0.16:8442/api/'
-  //baseUrl: 'http://localhost:8441/api/'
-  baseUrl: 'http://localhost:8772/api/'
+  baseUrl: 'https://funeralplace-api.vercel.app/'
 
 };
 

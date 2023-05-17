@@ -15,7 +15,7 @@
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12" *ngFor="let item of itensMenu">
-      <a [routerLink]="item.url" class="mx-3 block rounded-sm px-3 py-2 text-base leading-7 text-gray-800 hover:bg-yellow-600/80 hover:text-white duration-150">{{item.nome}}</a>
+      <a [routerLink]="item.url" (click)="scrollToElement(main)" class="mx-3 block rounded-sm px-3 py-2 text-base leading-7 text-gray-800 hover:bg-yellow-600/80 hover:text-white duration-150">{{item.nome}}</a>
     </div>
   </div>
 </nav>

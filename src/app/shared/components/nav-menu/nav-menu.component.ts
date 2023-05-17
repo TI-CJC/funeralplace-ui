@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,6 +12,7 @@ export class NavMenuComponent {
     {nome:"Quem somos", url: "quem-somos"},
     {nome:"Contate-nos", url: "contate-nos"},
   ]
+  @Input() main: any;
 
   constructor(
     private router: Router
@@ -19,5 +20,19 @@ export class NavMenuComponent {
 
   navegate(rota:any){
     this.router.navigate([rota]);
+  }
+
+  public scrollToElement(element:any): void {
+
+    element.scrollIntoView({
+
+      behavior: "smooth",
+
+      block: "start",
+
+      inline: "nearest"
+
+    });
+
   }
 }
