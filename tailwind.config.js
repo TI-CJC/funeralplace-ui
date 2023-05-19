@@ -8,8 +8,11 @@ module.exports = {
       colors:{
         primaryGreen: "#15552b"
       },
-      boxShadow: {
-        '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+      fontFamily: {
+        'raleway': ['Raleway', 'sans-serif'],
+        'lara': ['Lara', 'serif'],
+        'arima': ['Arima', 'cursive'],
+        'great-vibes': ['Great Vibes', 'cursive']
       }
     },
   },

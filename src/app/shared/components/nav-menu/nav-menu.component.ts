@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {
   Sidenav,
@@ -13,11 +13,15 @@ import {
 export class NavMenuComponent implements OnInit {
   itensMenu: any[] = [
     {nome:"Home", url: "/"},
+    {nome:"Servicos", url: "servicos"},
+    {nome:"Produtos", url: "produtos"},
     {nome:"Quem somos", url: "quem-somos"},
     {nome:"Contate-nos", url: "contate-nos"},
   ]
   @Input() main: any;
-
+  isNavbarVisible = true;
+  prevScrollPos = window.pageYOffset;
+  scrollDownCount = 0;
   constructor(
     private router: Router
   ){}
@@ -42,5 +46,42 @@ export class NavMenuComponent implements OnInit {
 
     });
 
+  }
+
+  /*
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: Event) {
+    const currentScrollPos = window.pageYOffset;
+    const isScrollingUp = currentScrollPos < this.prevScrollPos;
+
+    if (isScrollingUp) {
+      this.isNavbarVisible = true;
+    } else {
+      this.isNavbarVisible = false;
+    }
+
+    this.prevScrollPos = currentScrollPos;
+  }*/
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: Event) {
+    const currentScrollPos = window.pageYOffset;
+    const isScrollingUp = currentScrollPos < this.prevScrollPos;
+
+    if (isScrollingUp) {
+      this.scrollDownCount = 0;
+      this.isNavbarVisible = true;
+
+    } else {
+      this.scrollDownCount++;
+      if (this.scrollDownCount >= 2) {
+        console.log(this.scrollDownCount);
+        this.isNavbarVisible = false;
+
+        this.isNavbarVisible = false;
+      }
+    }
+
+    this.prevScrollPos = currentScrollPos;
   }
 }

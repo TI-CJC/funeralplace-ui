@@ -5,59 +5,55 @@
       <div class="h-[250px] sm:h-[300px]">
         <img class="mx-auto max-h-[300px]" src="{{imgSelected}}">
       </div>
-      <div class="flex flex-wrap mt-4">
-        <div class="cursor-pointer hover:scale-105 duration-150" *ngFor="let item of listImages">
-          <img (click)="selectImg(item.image)" class="h-[47px] sm:h-[70px] xl:h-22 2xl:h-24 mr-2" src="{{item.image}}">
+      <div class="flex flex-col">
+        <div class="flex flex-wrap justify-center mt-4">
+          <div class="cursor-pointer hover:scale-105 duration-150" *ngFor="let item of listImages">
+            <img (click)="selectImg(item.image)" class="h-[47px] sm:h-[70px] xl:h-22 2xl:h-24 mr-2 mt-2" src="{{item.image}}">
+          </div>
         </div>
+        <div class="flex flex-wrap justify-center mt-4">
+          <div class="cursor-pointer hover:scale-105 duration-150" *ngFor="let item of listImagesUrnas">
+            <img (click)="selectImg(item.image)" class="h-[47px] sm:h-[70px] xl:h-22 2xl:h-24 mr-2 mt-2" src="{{item.image}}">
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="mt-6 ml-5">
       <div class="flex flex-col">
-        <div class="text-primaryGreen text-center sm:text-start text-2xl sm:text-4xl mb-10 font-arima font-semibold">Nossos serviços</div>
-        <div class="uppercase text-primaryGreen text-lg font-arima font-semibold">Plantão 24 horas</div>
-        <div class="text-gray-500 ">(11) 4227-9595 / (11) 4122-0000</div>
+        <div class="text-primaryGreen text-center sm:text-start text-2xl sm:text-4xl mb-2 font-arima font-semibold">Nossos produtos</div>
+        <div class="text-gray-500 mb-10">(11) 4227-9595 / (11) 4122-0000</div>
         <div class="max-w-[450px] text-gray-500 mt-4 flex">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
-          <div class="ml-1">Higienização.</div>
+          <div class="ml-1">Urnas funerárias.</div>
         </div>
         <div class="max-w-[450px] text-gray-500 mt-2 flex">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
-          <div class="ml-1">Necromaquiagem.</div>
+          <div class="ml-1">Urnas cinerárias.</div>
         </div>
         <div class="max-w-[450px] text-gray-500 mt-2 flex">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
-          <div class="ml-1">Agente especialmente preparado para atender as famílias enlutadas.</div>
+          <div class="ml-1">Modelos de urnas.</div>
         </div>
         <div class="max-w-[450px] text-gray-500 mt-2 flex">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
-          <div class="ml-1">Transporte de urnas.</div>
+          <div class="ml-1">Coroas de flores.</div>
         </div>
         <div class="max-w-[450px] text-gray-500 mt-2 flex">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
-          <div class="ml-1">Recepção 24 h.</div>
+          <div class="ml-1">Vestimentas.</div>
         </div>
-        <div class="max-w-[450px] text-gray-500 mt-2 flex">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-          </svg>
-          <div class="ml-1">Salas de estar climatizadas.</div>
-        </div>
-        <div class="max-w-[450px] text-gray-500 mt-2 flex">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-          </svg>
-          <div class="ml-1">Serviços de vigilância por câmeras 24 h.</div>
-        </div>
+
       </div>
     </div>
   </div>

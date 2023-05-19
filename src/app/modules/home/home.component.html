@@ -1,8 +1,10 @@
-<div class="bg-white">
+<div class="bg-[url('/assets/images/background.png')] bg-no-repeat object-contain">
   <div class="relative isolate px-6 pt-14 lg:px-8">
-    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#15552b] to-[#d3aa15] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-    </div>
+    <!--
+      <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#15552b] to-[#d3aa15] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+      </div>
+    -->
     <div class="mx-auto max-w-2xl py-32 ">
       <div>
         <img class="mx-auto mb-5" src="./assets/images/logo_funeral_place.png">
@@ -17,15 +19,12 @@
         </div>
       </div>
       <div class="text-center">
-        <h1 class="text-2xl font-bold tracking-tight text-primaryGreen sm:text-2xl">Onde o respeito e o cuidado se encontram</h1>
-        <p class="mt-6 text-lg leading-8 text-gray-600">Funeral Place, honrando memórias com salas de velórios especiais e um ambiente acolhedor.</p>
+        <h1 class="text-2xl font-[500] tracking-tight text-primaryGreen sm:text-4xl font-great-vibes">Onde o respeito e o cuidado se encontram</h1>
+        <p class="mt-1 text-lg leading-8 text-gray-600 font-lara">Funeral Place, honrando memórias com salas de velórios especiais e um ambiente acolhedor.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <button
-          class="rounded-md bg-[#15552b] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#15832b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 duration-150"
-          data-te-toggle="modal"
-          data-te-target="#modal"
-          data-te-ripple-init
-          data-te-ripple-color="light"
+          class="rounded-md bg-[#15552b] font-lara px-3.5 py-2.5 text-sm font-normal text-white shadow-sm hover:bg-[#15832b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 duration-150"
+          routerLink="/servicos"
           >Solicitar contato
           </button>
           <!--
@@ -43,19 +42,19 @@
 </div>
 
   <div class="bg-gray-100 py-10">
-    <div class="text-center text-primaryGreen sm:text-4xl w-full">
+    <div class="text-center text-primaryGreen text-xl sm:text-4xl w-full font-arima">
       O que oferecemos
     </div>
-    <div class="flex sm:flex-row flex-col justify-center py-4 mt-4">
-      <div *ngFor="let item of listItensPrincipais" class="group cursor-pointer mr-4">
-        <img class="h-52 rounded-sm mx-auto" src="{{item.image}}">
+    <div class="flex sm:flex-row flex-col justify-center py-4 px-4 mt-4">
+      <div *ngFor="let item of listItensPrincipais" class="group cursor-pointer sm:mr-4">
+        <img class="h-40 lg:h-44 xl:h-52 rounded-sm mx-auto object-cover" src="{{item.image}}">
         <div class="py-4 group-hover:text-yellow-500 text-center text-xs duration-200 uppercase text-primaryGreen">{{item.txt}}</div>
       </div>
     </div>
   </div>
 <div class="bg-[url('/assets/images/parallax.jpg')] bg-fixed py-32 flex justify-center">
   <div class="w-[80%] sm:w-[50%]">
-    <div class="text-center text-primaryGreen text-xl xl:text-4xl">
+    <div class="text-center text-primaryGreen text-xl xl:text-4xl font-lara">
       Nas lembranças que guardamos, sua presença sempre estará viva, mesmo após a despedida.
     </div>
   </div>

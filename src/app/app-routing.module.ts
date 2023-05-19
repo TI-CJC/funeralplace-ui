@@ -5,6 +5,7 @@ import { QuemSomosComponent } from './modules/quem-somos/quem-somos.component';
 import { ContateNosComponent } from './modules/contate-nos/contate-nos.component';
 import { ServicosComponent } from './modules/servicos/servicos.component';
 import { AmbienteComponent } from './modules/ambiente/ambiente.component';
+import { ProdutosComponent } from './modules/produtos/produtos.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'contate-nos', component: ContateNosComponent },
   { path: 'servicos', component: ServicosComponent },
   { path: 'ambiente', component: AmbienteComponent },
+  { path: 'produtos', component: ProdutosComponent },
 ];
 
 @NgModule({

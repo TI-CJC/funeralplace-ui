@@ -11,6 +11,7 @@ import { ContateNosComponent } from './modules/contate-nos/contate-nos.component
 import { ServicosComponent } from './modules/servicos/servicos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AmbienteComponent } from './modules/ambiente/ambiente.component';
+import { ProdutosComponent } from './modules/produtos/produtos.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AmbienteComponent } from './modules/ambiente/ambiente.component';
     ContateNosComponent,
     ServicosComponent,
     AmbienteComponent,
+    ProdutosComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,9 @@
-<nav class="flex justify-center bg-gradient-to-b from-gray-300 ">
+<!--
+<nav class="flex justify-center bg-gradient-to-b from-green-700/30" [ngClass]="{'slide-down': isNavbarVisible,'slide-up':!isNavbarVisible}" [class.hidden]="!isNavbarVisible" [class.visible]="isNavbarVisible">
+-->
+
+<nav class="flex justify-center bg-gradient-to-b from-green-700/30" >
+
   <div class="flex items-center justify-between pt-3 pb-6 lg:px-8 w-[80%]" aria-label="Global">
     <div class="flex lg:flex-1">
       <div class="-m-1.5 p-1.5">
@@ -28,7 +33,7 @@
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12" *ngFor="let item of itensMenu">
-      <a [routerLink]="item.url" (click)="scrollToElement(main)" class="mx-3 block rounded-sm px-3 py-2 text-base leading-7 text-gray-800 hover:bg-yellow-600/80 hover:text-white duration-150">{{item.nome}}</a>
+      <a [routerLink]="item.url" (click)="scrollToElement(main)" class="mx-3 block rounded-sm px-3 py-1 text-base leading-7 text-gray-800 hover:bg-yellow-600/80 hover:text-white duration-150">{{item.nome}}</a>
     </div>
   </div>
 </nav>
