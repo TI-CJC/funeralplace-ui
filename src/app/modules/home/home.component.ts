@@ -17,7 +17,7 @@ export class HomeComponent {
       txt: 'Salas de velórios especiais'
     },
     {
-      image:'./assets/images/funeraria-7.jpg',
+      image:'./assets/images/sala2-funeral.png',
       txt: 'Salas de estar climatizadas'
     },
     {
