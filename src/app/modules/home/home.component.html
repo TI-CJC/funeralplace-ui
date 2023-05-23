@@ -49,7 +49,7 @@
       O que oferecemos
     </div>
     <div class="flex sm:flex-row flex-col justify-center py-4 px-4 mt-4">
-      <div *ngFor="let item of listItensPrincipais" class="group cursor-pointer sm:mr-4">
+      <div *ngFor="let item of listItensPrincipais" routerLink="/servicos" (click)="scrollToTop()" class="group cursor-pointer sm:mr-4">
         <img class="h-40 lg:h-44 xl:h-52 rounded-sm mx-auto object-cover" src="{{item.image}}">
         <div class="py-4 group-hover:text-yellow-500 text-center text-xs duration-200 uppercase text-primaryGreen">{{item.txt}}</div>
       </div>

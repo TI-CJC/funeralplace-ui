@@ -34,4 +34,11 @@ export class HomeComponent {
   ngOnInit() {
     initTE({ Modal, Ripple });
   }
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 }

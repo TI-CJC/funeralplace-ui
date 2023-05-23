@@ -2,7 +2,7 @@
 <nav class="flex justify-center bg-gradient-to-b from-green-700/30" [ngClass]="{'slide-down': isNavbarVisible,'slide-up':!isNavbarVisible}" [class.hidden]="!isNavbarVisible" [class.visible]="isNavbarVisible">
 -->
 
-<nav class="flex justify-center bg-gradient-to-b from-green-700/30" >
+<nav class="flex justify-center bg-gradient-to-b from-green-700/30 sticky top-0" >
 
   <div class="flex items-center justify-between pt-3 pb-6 lg:px-8 w-[80%]" aria-label="Global">
     <div class="flex lg:flex-1">
@@ -33,7 +33,7 @@
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12" *ngFor="let item of itensMenu">
-      <a [routerLink]="item.url" (click)="scrollToElement(main)" class="mx-3 block rounded-sm px-3 py-1 text-base leading-7 text-gray-800 hover:bg-yellow-600/80 hover:text-white duration-150">{{item.nome}}</a>
+      <a [routerLink]="item.url" (click)="scrollToTop()" class="mx-3 block rounded-sm px-3 py-1 text-base leading-7 text-gray-800 hover:bg-yellow-600/80 hover:text-white duration-150">{{item.nome}}</a>
     </div>
   </div>
 </nav>
@@ -50,7 +50,7 @@
 
     <li  class="relative">
       <div
-        (click)="scrollToElement(main)"
+        (click)="scrollToTop()"
         routerLink="/"
         class="flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-[0.875rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-slate-50 hover:text-inherit hover:outline-none focus:bg-slate-50 focus:text-inherit focus:outline-none active:bg-slate-50 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
         data-te-sidenav-link-ref>
@@ -78,7 +78,7 @@
     </li>
     <li  class="relative">
       <div
-        (click)="scrollToElement(main)"
+        (click)="scrollToTop()"
         routerLink="/quem-somos"
         class="flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-[0.875rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-slate-50 hover:text-inherit hover:outline-none focus:bg-slate-50 focus:text-inherit focus:outline-none active:bg-slate-50 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
         data-te-sidenav-link-ref>
@@ -106,7 +106,7 @@
     </li>
     <li  class="relative">
       <div
-        (click)="scrollToElement(main)"
+        (click)="scrollToTop()"
         routerLink="/contate-nos"
         class="flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 text-[0.875rem] text-gray-600 outline-none transition duration-300 ease-linear hover:bg-slate-50 hover:text-inherit hover:outline-none focus:bg-slate-50 focus:text-inherit focus:outline-none active:bg-slate-50 active:text-inherit active:outline-none data-[te-sidenav-state-active]:text-inherit data-[te-sidenav-state-focus]:outline-none motion-reduce:transition-none dark:text-gray-300 dark:hover:bg-white/10 dark:focus:bg-white/10 dark:active:bg-white/10"
         data-te-sidenav-link-ref>

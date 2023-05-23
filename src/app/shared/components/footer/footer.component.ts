@@ -7,23 +7,19 @@ import { Component, Input } from '@angular/core';
 })
 export class FooterComponent {
   itemsMenu: any[] = [
-    { nome: 'Home', url:'' },
-    { nome: 'Quem somos', url:'/quem-somos' },
-    { nome: 'Contate-nos', url:'/contate-nos' },
+    {nome:"Home", url: "/"},
+    {nome:"Servicos", url: "servicos"},
+    {nome:"Produtos", url: "produtos"},
+    {nome:"Quem somos", url: "quem-somos"},
+    {nome:"Contate-nos", url: "contate-nos"},
   ]
   @Input() main: any;
 
-  public scrollToElement(element:any): void {
-
-    element.scrollIntoView({
-
-      behavior: "smooth",
-
-      block: "start",
-
-      inline: "nearest"
-
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
-
   }
+
 }

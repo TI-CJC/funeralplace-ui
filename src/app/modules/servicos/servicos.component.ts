@@ -19,4 +19,6 @@ export class ServicosComponent {
   selectImg(image:any){
     this.imgSelected = image
   }
+
+
 }

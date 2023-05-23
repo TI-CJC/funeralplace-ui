@@ -34,18 +34,11 @@ export class NavMenuComponent implements OnInit {
     this.router.navigate([rota]);
   }
 
-  public scrollToElement(element:any): void {
-
-    element.scrollIntoView({
-
-      behavior: "smooth",
-
-      block: "start",
-
-      inline: "nearest"
-
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
-
   }
 
   /*
