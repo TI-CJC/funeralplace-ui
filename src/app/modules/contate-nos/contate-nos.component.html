@@ -8,7 +8,7 @@
           </svg>
         </div>
         <div class="text-sm text-gray-600 sm:text-lg text-center mt-4">
-          Tel: (11) 4226-1166
+          Tel: (11) 4122-0730 / (11) 4122-0000
         </div>
       </div>
       <div class="flex flex-col mt-4 sm:mt-0">
@@ -19,10 +19,10 @@
           </svg>
         </div>
         <div class="text-sm sm:text-lg text-gray-600  text-center mt-4">
-          Rua Oriente, 299
-          Bairro Barcelona
-          São Caetano do Sul - SP
-          CEP: 09551-010.
+          Rua Jardim da Colina, 265
+          Bairro Jardim Petroni
+          São Bernardo do Campo - SP
+          CEP: 09761-145.
         </div>
       </div>
       <div class="flex flex-col mt-4 sm:mt-0">
@@ -149,44 +149,44 @@
             >
             Enviar
 
-          </button>
-          <button
-            *ngIf="statusEmail === 'enviando'"
-            type="button"
-            class="flex justify-center rounded bg-primaryGreen px-6 pb-2 pt-2.5 w-full text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-950 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-            data-te-ripple-init
-            data-te-ripple-color="light"
-            >
-            <svg class="mr-2 mt-0.5 animate-spin" width="12px" height="12px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
+            </button>
+            <button
+              *ngIf="statusEmail === 'enviando'"
+              type="button"
+              class="flex justify-center rounded bg-primaryGreen px-6 pb-2 pt-2.5 w-full text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-950 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              >
+              <svg class="mr-2 mt-0.5 animate-spin" width="12px" height="12px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
 
-              <g fill="#F7F7F7" fill-rule="evenodd" clip-rule="evenodd">
+                <g fill="#F7F7F7" fill-rule="evenodd" clip-rule="evenodd">
 
-              <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z" opacity=".2"/>
+                <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z" opacity=".2"/>
 
-              <path d="M7.25.75A.75.75 0 018 0a8 8 0 018 8 .75.75 0 01-1.5 0A6.5 6.5 0 008 1.5a.75.75 0 01-.75-.75z"/>
+                <path d="M7.25.75A.75.75 0 018 0a8 8 0 018 8 .75.75 0 01-1.5 0A6.5 6.5 0 008 1.5a.75.75 0 01-.75-.75z"/>
 
-              </g>
+                </g>
 
-            </svg>
-            Enviando
+              </svg>
+              Enviando
 
-          </button>
-          <button
-            *ngIf="statusEmail === 'enviado'"
-            type="button"
-            class="flex justify-center rounded bg-primaryGreen px-6 pb-2 pt-2.5 w-full text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-950 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
-            data-te-ripple-init
-            data-te-ripple-color="light"
-            >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 -mt-0.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-            </svg>
-            Enviado
+            </button>
+            <button
+              *ngIf="statusEmail === 'enviado'"
+              type="button"
+              class="flex justify-center rounded bg-primaryGreen px-6 pb-2 pt-2.5 w-full text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-950 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 -mt-0.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Enviado
 
-          </button>
-          <div *ngIf="statusEmail === 'enviado'" class="h-10 w-full mt-2 border-[1px] border-primaryGreen rounded-md flex justify-center items-center">
-            <div class="text-center text-primaryGreen">Obrigado pelo contato logo iremos te retornar!</div>
-          </div>
+            </button>
+            <div *ngIf="statusEmail === 'enviado'" class="h-10 w-full mt-2 border-[1px] border-primaryGreen rounded-md flex justify-center items-center">
+              <div class="text-center text-primaryGreen">Obrigado pelo contato logo iremos te retornar!</div>
+            </div>
           </form>
         </div>
       </div>
