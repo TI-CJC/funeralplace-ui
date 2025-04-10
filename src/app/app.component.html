@@ -1,17 +1,22 @@
 <div #main class="h-screen">
-<header class="fixed inset-x-0 top-0 z-50">
-  <app-nav-menu [main]="main"></app-nav-menu>
-</header>
+  <ng-container *ngIf="!isSistemaRoute()">
+    <header class="fixed inset-x-0 top-0 z-50">
+      <app-nav-menu [main]="main"></app-nav-menu>
+    </header>
 
-<router-outlet></router-outlet>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-  <a href="https://wa.me/+55{{
-          11965735721
-        }}?text=Olá%20gostaria%20de%20mais%20informações" class="icon-whats hover:scale-105 duration-150"
-    target="_blank">
-    <i style="margin-top: 16px" class="fa fa-whatsapp"></i>
-  </a>
-  <footer>
-    <app-footer [main]="main"></app-footer>
-  </footer>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <a
+      href="https://wa.me/+5511965735721?text=Olá%20gostaria%20de%20mais%20informações"
+      class="icon-whats hover:scale-105 duration-150"
+      target="_blank"
+    >
+      <i style="margin-top: 16px" class="fa fa-whatsapp"></i>
+    </a>
+
+    <footer>
+      <app-footer [main]="main"></app-footer>
+    </footer>
+  </ng-container>
+
+  <router-outlet></router-outlet>
 </div>

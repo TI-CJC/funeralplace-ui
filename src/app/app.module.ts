@@ -12,6 +12,7 @@ import { ServicosComponent } from './modules/servicos/servicos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AmbienteComponent } from './modules/ambiente/ambiente.component';
 import { ProdutosComponent } from './modules/produtos/produtos.component';
+import { SistemaComponent } from './modules/sistema/sistema/sistema.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ProdutosComponent } from './modules/produtos/produtos.component';
     ServicosComponent,
     AmbienteComponent,
     ProdutosComponent,
+    SistemaComponent,
   ],
   imports: [
     BrowserModule,
