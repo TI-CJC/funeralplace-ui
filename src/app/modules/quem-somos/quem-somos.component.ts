@@ -14,9 +14,9 @@ export class QuemSomosComponent {
 
   imgSelected = './assets/images/logo_funeral_place.png'
   listImages: any[] = [
-    {image:'./assets/images/sala-funeral.png'},
-    {image:'./assets/images/sala2-funeral.png'},
-    {image:'./assets/images/sala3-funeral.png'},
+    {image:'./assets/images/funeraria-7.jpg'},
+    {image:'./assets/images/img-funeraria-8.png'},
+    {image:'./assets/images/img-funeraria-6.jpg'},
     {image:'./assets/images/funeraria-1.jpg'}
   ]
 
