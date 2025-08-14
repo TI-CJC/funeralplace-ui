@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const cpfBeneficiarioSeguro = document.getElementById('cpfBeneficiarioSeguro');
     const dataNascBeneficiarioSeguro = document.getElementById('dataNascBeneficiarioSeguro');
     const parentescoBeneficiarioSeguro = document.getElementById('parentescoBeneficiarioSeguro');
+    const produtoSelect = document.getElementById('produtoEscolhido')
 
     cremacaoSelect.addEventListener('change', (event) => {
         if (cremacaoSelect.value == '12') {
@@ -68,4 +69,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
             parentescoBeneficiarioSeguro.value='';
         }
     });
+
+    produtoSelect.addEventListener('change', (event) => {
+        if (produtoSelect.value == '120' || 
+    produtoSelect.value == '124' || 
+    produtoSelect.value == '128') {
+            cremacaoSelect.setAttribute('disabled', 'true');
+        } else {
+            cremacaoSelect.setAttribute('required', 'true');
+            cremacaoSelect.removeAttribute('disabled');
+        }
+    })
 });
