@@ -89,6 +89,13 @@ function atualizarOpcoesBeneficiarios() {
     seguroTitular.innerHTML = '<option value="" selected>Selecione</option>';
     seguroBeneficiario.innerHTML = '<option value="" selected>Selecione</option>';
 
+    //Adicionar opção de beneficiário fora do contrato
+    let optionBeneficiarioExterno = document.createElement('option');
+    optionBeneficiarioExterno.value = 'fora_contrato';
+    optionBeneficiarioExterno.textContent = 'Beneficiário fora do contrato';
+
+seguroBeneficiario.appendChild(optionBeneficiarioExterno);
+
     // Adiciona o titular, se existir
     if (dadosContrato.titular) {
         let optionTitular = document.createElement('option');
@@ -139,11 +146,30 @@ function adicionarEventListeners() {
         let dados = JSON.parse(this.value);
         preencherDados('TitularSeguro', dados);
     });
-
+    
     document.getElementById('seguroBeneficiario').addEventListener('change', function() {
-        let dados = JSON.parse(this.value);
-        preencherDados('BeneficiarioSeguro', dados);
-    });
+    if (this.value === 'fora_contrato') {
+        document.getElementById('nomeBeneficiarioSeguro').removeAttribute('readonly');
+        document.getElementById('cpfBeneficiarioSeguro').removeAttribute('readonly');
+        document.getElementById('dataNascBeneficiarioSeguro').removeAttribute('readonly');
+        document.getElementById('parentescoBeneficiarioSeguro').removeAttribute('readonly');
+
+        document.getElementById('nomeBeneficiarioSeguro').setAttribute('required', 'true');
+        document.getElementById('cpfBeneficiarioSeguro').setAttribute('required', 'true');
+        document.getElementById('dataNascBeneficiarioSeguro').setAttribute('required', 'true');
+        document.getElementById('parentescoBeneficiarioSeguro').setAttribute('required', 'true');
+
+        document.getElementById('nomeBeneficiarioSeguro').value = '';
+        document.getElementById('cpfBeneficiarioSeguro').value = '';
+        document.getElementById('dataNascBeneficiarioSeguro').value = '';
+        document.getElementById('parentescoBeneficiarioSeguro').value = '';
+
+        return;
+    }
+
+    let dados = JSON.parse(this.value);
+    preencherDados('BeneficiarioSeguro', dados);
+});
 /*
     document.getElementById('cremacaoSelect').addEventListener('change', function() {
         let disabled = this.value === '';
