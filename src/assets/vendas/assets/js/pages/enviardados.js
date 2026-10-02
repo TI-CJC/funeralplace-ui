@@ -57,7 +57,7 @@ function enviarDados() {
     finalizarBtn.classList.add('disabled');
 
 // Enviar dados via AJAX
-fetch('https://n8n.coll2b.com/webhook-test/06ce330e-b721-4965-869c-7f1e2c1c7566', {
+fetch('https://n8n.coll2b.com/webhook/06ce330e-b721-4965-869c-7f1e2c1c7566', {
     method: 'POST',
     body: formData
 })
